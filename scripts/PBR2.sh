@@ -1,5 +1,5 @@
 #!/bin/bash
-as
+
 while getopts ":abcde" opt; do
 	case $opt in
 		a)echo "No. of CPU Cores:"
