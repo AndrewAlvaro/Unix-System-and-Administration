@@ -11,7 +11,7 @@ while getopts ":abcde" opt; do
 			>&2
 		;;
 		c) echo "Total"
-			ps -u $USER  |
+			ps --user $USER -o pid,user,comm
                         >&2
                 ;;
 		d) echo "h2"
