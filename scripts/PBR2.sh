@@ -10,7 +10,7 @@ while getopts ":abcde" opt; do
 			ps -o pid,user,comm,nice,pri 
 			>&2
 		;;
-		c) echo "Total"
+		c) echo "Total processors running under current user:"
 			ps --user $USER -o pid,user,comm
                         >&2
                 ;;
