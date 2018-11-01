@@ -14,11 +14,12 @@ while getopts ":abcde" opt; do
 			ps --user $USER -o pid,user,comm | wc -l
                         >&2
                 ;;
-		d) echo "No. of file descripitors owned by current user"
+		d) echo "No. of file descripitors owned by current user:"
 			lsof -u $USER | wc -l
                         >&2
                 ;;
-		e) echo "h3"
+		e) echo "Maximum default number of file decriptors that can be opened by a process:"
+			cat /proc/sys/fs/file-max
                         >&2
                 ;;
 

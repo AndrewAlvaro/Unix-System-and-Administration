@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "----------------------------System Information-------------------------------"
 
 echo "Memory Details:"
 free -h
@@ -11,6 +12,6 @@ ifconfig -a
 echo
 echo "Uptime:"
 uptime
-echo
+echo "----------------------------------------------------------------------------"
 
 
