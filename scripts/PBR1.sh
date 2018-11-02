@@ -11,7 +11,7 @@ echo "Network Connection:"
 ifconfig -a
 echo
 echo "Uptime:"
-uptime a
+uptime 
 echo "----------------------------------------------------------------------------"
 
 
