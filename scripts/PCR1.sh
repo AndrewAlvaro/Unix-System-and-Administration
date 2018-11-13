@@ -8,16 +8,16 @@ read -r -p "Enter the type of category to search for, please choose path, type, 
 for typeoftosearch in $typeoftosearch; do
 	if [[ $typeoftosearch == 'path' ]];
 		then
-			typeoftosearch1="path"
+			typeoftosearch1="-print"
 	elif [[ $typeoftosearch == 'type' ]];
 		then
-			typeoftosearch1="type"
+			typeoftosearch1="-type c"
 	elif [[ $typeoftosearch == 'group' ]];
 		then
-                	typeoftosearch1="group"
+                	typeoftosearch1="-group grp"
 	elif [[ $typeoftosearch == 'fstype' ]];
 		then
-                	typeoftosearch1="fstype"
+                	typeoftosearch1="-fstype typ"
 	else
 		echo "Please enter path, type, group or fstype to search for only."
 		
@@ -40,11 +40,11 @@ for response in $response; do
 			response1="-L"
 	elif [ $response == 'n'  -o  $response == 'N' ];
                 then
-			response1=" "	
+			response1="-P"	
 	else
 		echo "Please enter Y for Yes and N for No only."
  	fi
 done
 
-find  $path1 -name -maxdepth $maxdepth $response1
+find  $response1 $path1 -maxdepth $maxdepth $typeoftosearch1
 
