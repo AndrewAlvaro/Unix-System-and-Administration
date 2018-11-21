@@ -1,5 +1,6 @@
 #!/bin/sh
-echo "----------------------------System Information-------------------------------"
+echo "=============================================== System information =================================================="
+
 
 #Calls command 'free -h' to show Memory Details(Memory and Swap)
 echo "Memory Details:"
@@ -19,6 +20,7 @@ echo
 #Calls command 'uptime' to show the system running time 
 echo "Uptime:"
 uptime 
-echo "----------------------------------------------------------------------------"
+echo "====================================================================================================================="
+
 
 
